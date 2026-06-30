@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.cosx.chat.mapper.ChatMessageMapper">
+
+    <resultMap id="BaseResultMap" type="cn.cosx.chat.entity.ChatMessage">
+        <id column="id" property="id"/>
+        <result column="conversation_id" property="conversationId"/>
+        <result column="message_type" property="messageType"/>
+        <result column="content" property="content"/>
+        <result column="model_name" property="modelName"/>
+        <result column="converted_content" property="convertedContent"/>
+        <result column="tokens" property="tokens"/>
+        <result column="user_id" property="userId"/>
+        <result column="used_tools" property="usedTools"
+                typeHandler="com.baomidou.mybatisplus.extension.handlers.Fastjson2TypeHandler"/>
+        <result column="tool_calling_result" property="toolCallingResult"/>
+        <result column="recommendations" property="recommendations"/>
+        <result column="thinking_content" property="thinkingContent"/>
+        <result column="created_time" property="createdTime"/>
+        <result column="updated_time" property="updatedTime"/>
+        <result column="lock_version" property="lockVersion"/>
+        <result column="deleted" property="deleted"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        id, conversation_id, message_type, content, model_name, converted_content, tokens,
+        user_id, used_tools, tool_calling_result, recommendations, thinking_content,
+        created_time, updated_time, lock_version, deleted
+    </sql>
+
+</mapper>
