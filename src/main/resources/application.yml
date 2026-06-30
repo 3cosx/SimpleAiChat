@@ -11,7 +11,7 @@ spring:
       chat: deepseek
     deepseek:
       base-url: https://api.deepseek.com
-      api-key: sk-aa9fa9ebd95e450da8207dac19dfe00f
+      api-key: sk-xxxxxxxxxxxxx
       chat:
         model: deepseek-v4-pro
         temperature: 0.8
@@ -21,7 +21,7 @@ spring:
 tavily:
   search-url: https://api.tavily.com/search
   mcp-url: https://mcp.tavily.com/mcp/
-  api-key: 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
+  api-key: xxxxxxx
   max-results: 5
 
 mybatis-plus:
